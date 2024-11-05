@@ -1,0 +1,7 @@
+E:\VegetableShop\DTO\bin\Release\net8.0\publish\DTO.exe
+E:\VegetableShop\DTO\bin\Release\net8.0\publish\appsettings.Development.json
+E:\VegetableShop\DTO\bin\Release\net8.0\publish\appsettings.json
+E:\VegetableShop\DTO\bin\Release\net8.0\publish\DTO.dll
+E:\VegetableShop\DTO\bin\Release\net8.0\publish\DTO.deps.json
+E:\VegetableShop\DTO\bin\Release\net8.0\publish\DTO.runtimeconfig.json
+E:\VegetableShop\DTO\bin\Release\net8.0\publish\DTO.pdb

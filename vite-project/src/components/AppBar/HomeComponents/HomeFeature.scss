@@ -1,0 +1,58 @@
+.home__feature{
+    padding-top: 8rem;
+    
+    background-color: #fafafa;
+    .product-info{
+        background-color: none;
+
+    }
+    .product-title{
+        font-size: 32px;
+        font-weight: 350;
+    }
+    .product-price{
+        margin-bottom: 0.2rem;
+        .current-price{
+            color: #86bc42;
+            font-size: 25px;
+            
+        }
+    }
+    .product-image{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    @media (max-width: 768px) {
+        .col-7, .col-5 {
+          flex: 0 0 100%; /* Khi màn hình nhỏ hơn 768px, mỗi cột chiếm 100% */
+        }
+    }
+    @media screen and (max-width: 540px) {
+        .product-image{
+            img{
+                
+                width: 330px;
+                height: auto;
+            }
+        }
+    }
+    .product-desc{
+        color: #595959;
+        ol{
+            padding: 0;
+            margin: 0 0 15px 20px;
+            li{
+                padding-bottom: 10px;
+            }
+        }
+    }
+    .product-action{
+        margin-top: 30px;
+        button{
+            width: 150px;
+            border-radius: 30px;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.drawer {
+    position: fixed;
+    top:0;
+    bottom: 0;
+    
+}
+.drawer--right{
+   
+    width: 300px;
+    background-color: #86bc42;
+    right: -300px;
+    border-left: 1px solid #e9e9e9;
+    z-index: 1000000;
+     /* Hiệu ứng trượt */
+}
+.drawer__header{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    button{
+        list-style: none;
+        padding: 0;
+        border: none;
+        color: #fff;
+        background-color: #86bc42;
+        align-items: center;
+    }
+}
+ul{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    li{
+        padding: 10px;
+        .mobile-nav__link{
+            display: inline-block;
+            position: relative;
+            font-weight: 400;
+            padding: 0px;
+            color: #e3e3e3;
+        }
+    }
+}
+.drawer--right.open {
+    /* Khi mở sẽ hiển thị */
+    transform: translateX(-300px); /* Đẩy Drawer ra ngoài màn hình về bên phải */
+    transition: transform 0.5s ease-in-out;
+  }

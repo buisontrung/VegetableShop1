@@ -1,0 +1,16 @@
+.bg-login{
+    background-color: #86bc42;
+}
+.login-page{
+    p,h2,button,span,svg{
+        color: #fff;
+    }
+    a:hover{
+        svg,span{
+            color: #86bc42;
+        }
+    }
+}
+.post-content{
+    background-color: white;
+}

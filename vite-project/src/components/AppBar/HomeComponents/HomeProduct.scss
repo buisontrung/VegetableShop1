@@ -1,0 +1,128 @@
+.tab .active{
+    color: #86bc42;
+    
+}
+.tab{
+    margin-bottom: 20px;
+    margin: 0 auto auto;
+    text-align: center;
+    display: table;
+    border-bottom: 1px solid #ededed;
+    box-sizing: content-box;
+
+}
+.tab{
+    button{
+        position: relative;
+        background: none;
+        text-transform: capitalize;
+        display: inline-block; /* Giữ các nút trên cùng một hàng */
+        margin: 0 10px; /* Thêm khoảng cách giữa các nút */
+        white-space: nowrap;
+        font-size: 1.2rem;
+    }
+}
+.tab button::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 0px;
+    background: #86bc42;
+    height: 3px;
+    transition: width 0.5s ease;
+}
+.tab button:hover{
+    color:#86bc42 ;
+}
+.tab button:hover::after,
+.tab button.active::after {
+     
+    width: 100%;
+}
+.product-img{
+    
+    width: 100%;
+
+    a{
+        display: block;
+    }
+    img{
+        width: 275px;
+        max-width: 275px;
+        height: 275px;
+    }
+}
+.product-item{
+    padding: 0;
+    border: solid 1px #ededed;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 15px;
+    padding-top: 10px;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    min-height: 392px;
+}
+.section-title{
+    margin-bottom: 80px;
+}
+.home__products .product-info{
+    text-align: center;
+    width: 275px;
+    min-width: 100%;
+    
+
+    background: #fafafa;
+    transition: background 0.5s ease, transform 0.5s ease;
+    transform: translateY(52px);
+}
+ .product-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    transform: translateY(-7px);
+    padding-top: 0;
+    .product-info{
+        background-color: #86bc42;
+        transform: translateY(0px);
+    }
+    .product-price span {
+        color: #fff;
+        transition: color 1s ease;
+    }
+    .product-title{
+        padding-top: 20px;
+        
+    }
+}
+
+.product-price{
+    span{
+        color: #86bc42;
+        transition: colors 1s ease;
+        
+    }
+    padding-bottom: 10px;
+}
+.product-title{
+    min-height: 46px;
+    a{
+        font-weight: 400;
+        font-size: 1.4rem;
+        text-transform: capitalize;
+        font-family: "Itim", cursive;
+    }
+}
+.product-action{
+
+
+
+    button{
+        color: #fafafa;
+        background-color: #86bc42;
+        border: 1px solid #fff;
+        border-radius: 20px;
+        padding: 8px 14px;
+        margin-bottom: 10px;
+    }
+}

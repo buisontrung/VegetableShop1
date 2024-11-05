@@ -1,0 +1,161 @@
+
+.hd-desktop{
+    background-color: #86bc42;
+    .wrapper {
+
+        margin: 0 10rem;
+        padding: 1rem;
+        
+      
+      
+    }
+    .grid__item.large--one-half{
+        a{
+            color: #fff;
+        }
+    }
+   
+}
+.grid{
+    display: flex;
+    justify-content: space-between;
+  }
+@media only screen and (max-width: 541px) {
+    .hd-desktop {
+        display: none !important;
+    }
+}
+
+.hdt-account{
+    display: flex;
+}
+.grid__item{
+    display: flex;
+}
+.desktop-cart-wrapper{
+    border-left: 0.5px solid #ccc;
+    position: relative;
+    span{
+        position: absolute;
+        top:-10px;
+        right: -10px;
+        border-radius: 100%;
+        background-color: #86bc42;
+        color: #fff;
+        text-align: center;
+        width: 20px;
+    }
+}
+.navbar-main{
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+}
+.navbar-left{
+    display: flex;
+
+}
+.search-nav {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.logo{
+    width: 75px;
+    height: 75px;
+}
+.header_content {
+    width: 100%;
+}
+.hd-logo{
+    
+    img{
+        max-height: 50px;
+    }
+}
+@media only screen and (min-width: 767px) {
+    .large--hide {
+        display: none !important;
+    }
+}
+#header {
+    
+ /* Đảm bảo nó ở trên cùng */
+    background-color: white; /* Để dễ thấy */
+    
+}
+.hd-fixed{
+    position: fixed; /* Sử dụng fixed thay vì sticky */
+    top: 0; /* Hoặc 30px nếu bạn muốn */
+    left: 0; /* Căn chỉnh sang bên trái nếu cần */
+    right: 0; /* Căn chỉnh sang bên phải nếu cần */
+    z-index: 10000; 
+    background-color: #86bc42;
+    a{
+        color: #fff;
+    }
+    a:hover {
+        color:  #ddd;
+      }
+}
+.hd-center{
+    a{
+        color: #fff;
+    }
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.hd-contact{
+    a{
+        color: #fff;
+    }
+}
+.user{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #fff;
+    
+    p{
+        margin: 0;
+        color: #010101;
+    }
+    
+}
+
+.user:hover{
+    .user-nav{
+        display: block;
+    }
+}
+.user-nav::before{
+    background-color: #010101;
+    width: 10px;
+    height: 10px;
+    
+}
+.user-nav{
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    width: 150px;
+    top: 100%;
+    right: 0;
+    button{
+        color: #86bc42;
+        background-color: #fff;
+    }
+
+}
+.user-infor{
+    border-bottom:1px solid #ddd ;
+}

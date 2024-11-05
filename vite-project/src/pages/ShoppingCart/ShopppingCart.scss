@@ -1,0 +1,51 @@
+.card .rounded-3{
+    background-color: #86bc42;
+    .btn{
+        background-color: #fff;
+        color:#86bc42 ;
+    }
+}
+.stardust-checkbox {
+    
+    color: rgba(0, 0, 0, .54);
+    cursor: default;
+    
+    font-family: -apple-system, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Roboto, Droid Sans, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    max-width: 400px;
+    
+}
+.stardust-checkbox--checked {
+    .stardust-checkbox__box{
+        background: #ee4d2d;
+    border-color: #ee4d2d;
+    }
+    
+}
+.stardust-checkbox__input {
+    
+}
+input[type=checkbox]
+{
+    appearance: none; /* Loại bỏ checkbox mặc định */
+    -webkit-appearance: none; /* Cho trình duyệt WebKit */
+  transform: scale(1.5);
+  padding: 6px;
+  border: 1px solid #d3ced2;
+  
+  border-radius: 2px;
+}
+input[type="checkbox"]:checked {
+    background-color: #86bc42;
+    border-color: #86bc42;
+}
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10px;
+}

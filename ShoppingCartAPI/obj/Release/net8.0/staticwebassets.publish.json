@@ -1,0 +1,23 @@
+{
+  "Version": 1,
+  "Hash": "/YhNjxftpRHlof2UHDCW4m8ruYWGhoUa+OR6+Vp2IoE=",
+  "Source": "ShoppingCartAPI",
+  "BasePath": "_content/ShoppingCartAPI",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "E:\\VegetableShop\\DTO\\DTO.csproj",
+      "Version": 2,
+      "Source": "DTO",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Release;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

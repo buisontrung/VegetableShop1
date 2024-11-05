@@ -1,0 +1,122 @@
+.woocommerce-pagination{
+    text-align: center;
+    padding-top: 20px;
+    ul{
+        display: inline-block;
+        white-space: nowrap;
+        padding: 0;
+        
+        border: 1px solid #d3ced2;
+        border-right: 0;
+        li {
+            display: inline-block; 
+
+            padding: 5px 10px;
+            border-right: 1px solid #d3ced2;
+
+        }
+       
+    }
+}
+.star{
+
+    margin-right: 5px;
+}
+.form-email,.form-auth{
+    input{
+        padding: 8px 10px!important;
+        border: 1px solid #d3ced2;
+    }
+}
+
+ul.slick-dots.slick-thumb{
+    margin-top: 10px;
+    position: unset !important;
+    li{
+        border: 1px solid #d3ced2;
+        height: 100%;
+        width: 23%;
+        img{
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+.crossed-out{
+    display: none;
+}
+.swatch-element label{
+    position: relative;
+    border: 1px solid #d3ced2;
+    padding: 5px;
+}
+.swatch-element label.sd {
+    position: relative;
+    border: 1px solid #e4393c;
+    padding: 5px;
+}
+.swatch .img-check {
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.js-qty__num{
+    width: 30px;
+    border: none;
+}
+.js-qty{
+    border: 1px solid #d3ced2;
+    display: inline-block;
+}
+.quantity-product{
+    display: flex;
+    button{
+        height: 100%;
+        width: 30px;
+    }
+    input{
+        text-align: center;
+        
+    }
+    input:focus {
+        border: 3px solid black;
+      }
+}
+.btn-tinted, .btn.btn-tinted {
+    background: rgba(255, 87, 34, .1);
+    background: #d8f9d5;
+    border: 1px solid #86bc42;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .03);
+    color: #86bc42;
+    
+    outline: 0;
+    overflow: visible;
+    position: relative;
+}
+.btn--l {
+    font-size: 16px;
+    height: 48px;
+    padding: 0 20px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.btn-solid-primary {
+    background: #86bc42;
+    outline: 0;
+    overflow: visible;
+    position: relative;
+    color: #fff;
+}
+.btn-solid-primary:hover{
+    background: #8bc545;
+    color: #fff;
+}
+.btn-tinted{
+    img{
+        height: 20px;
+        width: 20px;
+        color: #86bc42;
+        margin-right: 10px;
+    }
+}
