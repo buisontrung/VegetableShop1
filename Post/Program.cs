@@ -49,11 +49,7 @@ namespace Post
 				app.UseSwagger();
 				app.UseSwaggerUI();
 			}
-			app.UseStaticFiles(new StaticFileOptions
-			{
-				FileProvider = new PhysicalFileProvider(Path.Combine(builder.Environment.ContentRootPath, "Images")),
-				RequestPath = "/images"
-			});
+			
 
 			app.UseHttpsRedirection();
 

@@ -4923,11 +4923,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VegetableShop\\Gateway\\Gateway.csproj",
+      "projectUniqueName": "E:\\VegetableShop1\\Gateway\\Gateway.csproj",
       "projectName": "Gateway",
-      "projectPath": "E:\\VegetableShop\\Gateway\\Gateway.csproj",
+      "projectPath": "E:\\VegetableShop1\\Gateway\\Gateway.csproj",
       "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-      "outputPath": "E:\\VegetableShop\\Gateway\\obj\\",
+      "outputPath": "E:\\VegetableShop1\\Gateway\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NICKw4Aa6Wbbb40AnPRgU2ic1JJn1I15D1+TAuGS7njK/nF4G0A/AJ2rRPzaKKn6uvo2oUVqSQctCcbPduJcGw==",
+  "dgSpecHash": "PGzc3KMCnJqr6uJEwIywZB/Nxq/bo8ACfg81JIPj3EyvT7nhQ+jd426Xjx661hQnkgnQk03sY23i7JnPqwrNVA==",
   "success": true,
-  "projectFilePath": "E:\\VegetableShop\\Authentication\\Authentication.csproj",
+  "projectFilePath": "E:\\VegetableShop1\\Authentication\\Authentication.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

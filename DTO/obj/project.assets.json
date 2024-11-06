@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VegetableShop\\DTO\\DTO.csproj",
+      "projectUniqueName": "E:\\VegetableShop1\\DTO\\DTO.csproj",
       "projectName": "DTO",
-      "projectPath": "E:\\VegetableShop\\DTO\\DTO.csproj",
+      "projectPath": "E:\\VegetableShop1\\DTO\\DTO.csproj",
       "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-      "outputPath": "E:\\VegetableShop\\DTO\\obj\\",
+      "outputPath": "E:\\VegetableShop1\\DTO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",

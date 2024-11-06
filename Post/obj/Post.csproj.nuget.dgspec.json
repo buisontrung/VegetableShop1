@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\VegetableShop\\Post\\Post.csproj": {}
+    "E:\\VegetableShop1\\Post\\Post.csproj": {}
   },
   "projects": {
-    "E:\\VegetableShop\\Post\\Post.csproj": {
+    "E:\\VegetableShop1\\Post\\Post.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\VegetableShop\\Post\\Post.csproj",
+        "projectUniqueName": "E:\\VegetableShop1\\Post\\Post.csproj",
         "projectName": "Post",
-        "projectPath": "E:\\VegetableShop\\Post\\Post.csproj",
+        "projectPath": "E:\\VegetableShop1\\Post\\Post.csproj",
         "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-        "outputPath": "E:\\VegetableShop\\Post\\obj\\",
+        "outputPath": "E:\\VegetableShop1\\Post\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",

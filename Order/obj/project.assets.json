@@ -4472,11 +4472,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VegetableShop\\Order\\Order.csproj",
+      "projectUniqueName": "E:\\VegetableShop1\\Order\\Order.csproj",
       "projectName": "Order",
-      "projectPath": "E:\\VegetableShop\\Order\\Order.csproj",
+      "projectPath": "E:\\VegetableShop1\\Order\\Order.csproj",
       "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-      "outputPath": "E:\\VegetableShop\\Order\\obj\\",
+      "outputPath": "E:\\VegetableShop1\\Order\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",

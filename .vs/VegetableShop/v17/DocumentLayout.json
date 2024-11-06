@@ -1,7 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\VegetableShop\\",
-  "Documents": [],
+  "WorkspaceRootPath": "E:\\VegetableShop1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|e:\\vegetableshop1\\shoppingcartapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|solutionrelative:shoppingcartapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{45A2BD60-EAAD-45E0-9C07-BE62BCE0EF4A}|Post\\Post.csproj|e:\\vegetableshop1\\post\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{45A2BD60-EAAD-45E0-9C07-BE62BCE0EF4A}|Post\\Post.csproj|solutionrelative:post\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C759BAE0-D2FC-4914-B3A0-B6CF6648E75B}|..\\ProductAPI\\ProductAPI.csproj|e:\\productapi\\productapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +21,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -24,8 +36,43 @@
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\VegetableShop1\\ShoppingCartAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "ShoppingCartAPI\\appsettings.json",
+              "ToolTip": "E:\\VegetableShop1\\ShoppingCartAPI\\appsettings.json",
+              "RelativeToolTip": "ShoppingCartAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-11-06T09:30:52.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Post\\Program.cs",
+              "RelativeDocumentMoniker": "Post\\Program.cs",
+              "ToolTip": "E:\\VegetableShop1\\Post\\Program.cs",
+              "RelativeToolTip": "Post\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAuwC8AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T08:48:10.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductAPI",
+              "DocumentMoniker": "E:\\ProductAPI\\ProductAPI.csproj",
+              "RelativeDocumentMoniker": "..\\ProductAPI\\ProductAPI.csproj",
+              "ToolTip": "E:\\ProductAPI\\ProductAPI.csproj",
+              "RelativeToolTip": "..\\ProductAPI\\ProductAPI.csproj",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAABIAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-11-06T08:49:42.436Z",
+              "EditorCaption": ""
             }
           ]
         }

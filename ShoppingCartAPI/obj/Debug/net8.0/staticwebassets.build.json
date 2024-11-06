@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "sYgtyyPcQNGiZpPRu+p2HZ3rX++zwNdyCXZOWhQzRpM=",
+  "Hash": "RLP8s4NInumJCurCZw8f9Iv0w5zcIEslKBO1x9ECWfI=",
   "Source": "ShoppingCartAPI",
   "BasePath": "_content/ShoppingCartAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "E:\\VegetableShop\\DTO\\DTO.csproj",
+      "Identity": "E:\\VegetableShop1\\DTO\\DTO.csproj",
       "Version": 2,
       "Source": "DTO",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

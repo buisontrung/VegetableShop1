@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Xhvjxmd9OuER5kg8GcCHWnHxuvKdF1wmcJUCF8VcUwcDcJLfLThUlU4JYcJqiEMde83E+9RGF0d1FiDSlTPyoA==",
+  "dgSpecHash": "RW/C914rwhkwxhg87THx858SdJlBRJW3rOOsd8GvGwCQIx3QnLJ8tO3aqTEEcjWZz8qr20uJtNnAeF4JvqpEgg==",
   "success": true,
-  "projectFilePath": "E:\\VegetableShop\\Gateway\\Gateway.csproj",
+  "projectFilePath": "E:\\VegetableShop1\\Gateway\\Gateway.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e7DwF56qJZS/EvGHe+HrJ7v/jlOR1dIcF2W5rYpGs98Lk4hfET6AkjJGnqcxlrf52XFDorfHi58FVXtKqgSXMQ==",
+  "dgSpecHash": "jmgo9ebW67nW5WOHTJl98WZ7tWBGVfmilTI8hrJgrD9ZjjBSTDrfo7Go5dnP1x67AZfyFSBzH/34htwA0E+FDw==",
   "success": true,
-  "projectFilePath": "E:\\VegetableShop\\Post\\Post.csproj",
+  "projectFilePath": "E:\\VegetableShop1\\Post\\Post.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",

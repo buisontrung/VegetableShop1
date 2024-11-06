@@ -5024,11 +5024,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VegetableShop\\Authentication\\Authentication.csproj",
+      "projectUniqueName": "E:\\VegetableShop1\\Authentication\\Authentication.csproj",
       "projectName": "Authentication",
-      "projectPath": "E:\\VegetableShop\\Authentication\\Authentication.csproj",
+      "projectPath": "E:\\VegetableShop1\\Authentication\\Authentication.csproj",
       "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-      "outputPath": "E:\\VegetableShop\\Authentication\\obj\\",
+      "outputPath": "E:\\VegetableShop1\\Authentication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",

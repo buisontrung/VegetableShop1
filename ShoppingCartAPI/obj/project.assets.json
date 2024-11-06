@@ -2954,11 +2954,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\VegetableShop\\ShoppingCartAPI\\ShoppingCartAPI.csproj",
+      "projectUniqueName": "E:\\VegetableShop1\\ShoppingCartAPI\\ShoppingCartAPI.csproj",
       "projectName": "ShoppingCartAPI",
-      "projectPath": "E:\\VegetableShop\\ShoppingCartAPI\\ShoppingCartAPI.csproj",
+      "projectPath": "E:\\VegetableShop1\\ShoppingCartAPI\\ShoppingCartAPI.csproj",
       "packagesPath": "C:\\Users\\FPTSHOP\\.nuget\\packages\\",
-      "outputPath": "E:\\VegetableShop\\ShoppingCartAPI\\obj\\",
+      "outputPath": "E:\\VegetableShop1\\ShoppingCartAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\FPTSHOP\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2975,8 +2975,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\VegetableShop\\DTO\\DTO.csproj": {
-              "projectPath": "E:\\VegetableShop\\DTO\\DTO.csproj"
+            "E:\\VegetableShop1\\DTO\\DTO.csproj": {
+              "projectPath": "E:\\VegetableShop1\\DTO\\DTO.csproj"
             }
           }
         }

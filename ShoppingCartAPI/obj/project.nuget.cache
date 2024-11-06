@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/0BiWW4Zj9Z+F3jMtgCyQxxs97htVsjrhSPVixuIOpb2Jp8yUxIZhGr0z2hSV65y81Ma3urOylCBTb/A3mX96A==",
+  "dgSpecHash": "dnqI+oYSLlonnPpnhaEQ8CvkvA1DJpfC7wiosBjOK1N7DnM4VBTwuGscA/+QHob98Co2WiUPtkmPhkL6zxl3ZQ==",
   "success": true,
-  "projectFilePath": "E:\\VegetableShop\\ShoppingCartAPI\\ShoppingCartAPI.csproj",
+  "projectFilePath": "E:\\VegetableShop1\\ShoppingCartAPI\\ShoppingCartAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

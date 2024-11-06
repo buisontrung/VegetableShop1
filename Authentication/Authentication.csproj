@@ -7,6 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Images\**" />
+    <Compile Remove="IRepository\**" />
+    <Compile Remove="Repository\**" />
+    <Content Remove="Images\**" />
+    <Content Remove="IRepository\**" />
+    <Content Remove="Repository\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <EmbeddedResource Remove="IRepository\**" />
+    <EmbeddedResource Remove="Repository\**" />
+    <None Remove="Images\**" />
+    <None Remove="IRepository\**" />
+    <None Remove="Repository\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="13.0.1" />
     <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
     <PackageReference Include="MailKit" Version="4.8.0" />
@@ -21,12 +36,6 @@
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.10" />
     <PackageReference Include="MimeKit" Version="4.8.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="IRepository\" />
-    <Folder Include="Repository\" />
   </ItemGroup>
 
 </Project>

@@ -57,7 +57,7 @@ namespace Authentication.Controllers
 			return Ok(userDto);
 		}
 		[HttpGet("getuser")]
-		[Authorize]
+		
 		public async Task<IActionResult> GetUserByUserName()
 		{
 			var username = User.Identity?.Name;
