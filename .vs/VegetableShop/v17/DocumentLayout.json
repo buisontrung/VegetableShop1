@@ -3,15 +3,64 @@
   "WorkspaceRootPath": "E:\\VegetableShop1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|e:\\vegetableshop1\\shoppingcartapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|solutionrelative:shoppingcartapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{45A2BD60-EAAD-45E0-9C07-BE62BCE0EF4A}|Post\\Post.csproj|e:\\vegetableshop1\\post\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{45A2BD60-EAAD-45E0-9C07-BE62BCE0EF4A}|Post\\Post.csproj|solutionrelative:post\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\model\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\model\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C759BAE0-D2FC-4914-B3A0-B6CF6648E75B}|..\\ProductAPI\\ProductAPI.csproj|e:\\productapi\\productapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\modeldto\\verifyotpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\modeldto\\verifyotpdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\modeldto\\verifyemaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\modeldto\\verifyemaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|e:\\vegetableshop1\\productapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|solutionrelative:productapi\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|e:\\vegetableshop1\\productapi\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|solutionrelative:productapi\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|e:\\vegetableshop1\\productapi\\irepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|solutionrelative:productapi\\irepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|e:\\vegetableshop1\\shoppingcartapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|solutionrelative:shoppingcartapi\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|e:\\vegetableshop1\\shoppingcartapi\\repository\\shoppingcartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AE4172B-9F98-4AED-937E-33225C7E4434}|ShoppingCartAPI\\ShoppingCartAPI.csproj|solutionrelative:shoppingcartapi\\repository\\shoppingcartrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|e:\\vegetableshop1\\productapi\\repository\\productvariantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1963BAA3-39CD-4407-9E56-7781CD66E09F}|ProductAPI\\ProductAPI.csproj|solutionrelative:productapi\\repository\\productvariantrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\modeldto\\otp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\modeldto\\otp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\controllers\\addresscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\repository\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\repository\\addressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\irepository\\iaddressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\irepository\\iaddressrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|e:\\vegetableshop1\\authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{53178ECC-FB8A-4915-B107-8655AAB66EFE}|Authentication\\Authentication.csproj|solutionrelative:authentication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Bookmark",
@@ -36,42 +85,201 @@
               "Name": "ST:0:0:{fbcae063-e2c0-4ab1-a516-996ea3dafb72}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\VegetableShop1\\ShoppingCartAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "ShoppingCartAPI\\appsettings.json",
-              "ToolTip": "E:\\VegetableShop1\\ShoppingCartAPI\\appsettings.json",
-              "RelativeToolTip": "ShoppingCartAPI\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-11-06T09:30:52.937Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\VegetableShop1\\Post\\Program.cs",
-              "RelativeDocumentMoniker": "Post\\Program.cs",
-              "ToolTip": "E:\\VegetableShop1\\Post\\Program.cs",
-              "RelativeToolTip": "Post\\Program.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAuwC8AAAAEAAAA",
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\Model\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Authentication\\Model\\ApplicationUser.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\Model\\ApplicationUser.cs",
+              "RelativeToolTip": "Authentication\\Model\\ApplicationUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T08:48:10.359Z",
+              "WhenOpened": "2024-11-13T16:35:33.533Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VerifyEmailDto.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\ModelDto\\VerifyEmailDto.cs",
+              "RelativeDocumentMoniker": "Authentication\\ModelDto\\VerifyEmailDto.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\ModelDto\\VerifyEmailDto.cs",
+              "RelativeToolTip": "Authentication\\ModelDto\\VerifyEmailDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:54:53.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\ProductAPI\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "ProductAPI\\Controllers\\ProductController.cs",
+              "ToolTip": "E:\\VegetableShop1\\ProductAPI\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "ProductAPI\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAAwDwAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:24:24.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\ProductAPI\\IRepository\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "ProductAPI\\IRepository\\IProductRepository.cs",
+              "ToolTip": "E:\\VegetableShop1\\ProductAPI\\IRepository\\IProductRepository.cs",
+              "RelativeToolTip": "ProductAPI\\IRepository\\IProductRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:23:06.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\ProductAPI\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "ProductAPI\\Repository\\ProductRepository.cs",
+              "ToolTip": "E:\\VegetableShop1\\ProductAPI\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "ProductAPI\\Repository\\ProductRepository.cs",
+              "ViewState": "AQIAAJMAAAAAAAAAAAAAAJcAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:19:49.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\ShoppingCartAPI\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "ShoppingCartAPI\\Services\\ProductService.cs",
+              "ToolTip": "E:\\VegetableShop1\\ShoppingCartAPI\\Services\\ProductService.cs",
+              "RelativeToolTip": "ShoppingCartAPI\\Services\\ProductService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAywCYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:11:58.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductVariantRepository.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\ProductAPI\\Repository\\ProductVariantRepository.cs",
+              "RelativeDocumentMoniker": "ProductAPI\\Repository\\ProductVariantRepository.cs",
+              "ToolTip": "E:\\VegetableShop1\\ProductAPI\\Repository\\ProductVariantRepository.cs",
+              "RelativeToolTip": "ProductAPI\\Repository\\ProductVariantRepository.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T11:10:45.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Otp.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\ModelDto\\Otp.cs",
+              "RelativeDocumentMoniker": "Authentication\\ModelDto\\Otp.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\ModelDto\\Otp.cs",
+              "RelativeToolTip": "Authentication\\ModelDto\\Otp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T08:18:00.782Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductAPI",
-              "DocumentMoniker": "E:\\ProductAPI\\ProductAPI.csproj",
-              "RelativeDocumentMoniker": "..\\ProductAPI\\ProductAPI.csproj",
-              "ToolTip": "E:\\ProductAPI\\ProductAPI.csproj",
-              "RelativeToolTip": "..\\ProductAPI\\ProductAPI.csproj",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABIAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-06T08:49:42.436Z",
+              "Title": "VerifyOtpDto.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\ModelDto\\VerifyOtpDto.cs",
+              "RelativeDocumentMoniker": "Authentication\\ModelDto\\VerifyOtpDto.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\ModelDto\\VerifyOtpDto.cs",
+              "RelativeToolTip": "Authentication\\ModelDto\\VerifyOtpDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T08:17:53.852Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Authentication\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Authentication\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAD8BAAAAAAAAAAAgwFYBAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T08:17:13.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\Program.cs",
+              "RelativeDocumentMoniker": "Authentication\\Program.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\Program.cs",
+              "RelativeToolTip": "Authentication\\Program.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAQwB4AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T10:46:24.992Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AddressRepository.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\Repository\\AddressRepository.cs",
+              "RelativeDocumentMoniker": "Authentication\\Repository\\AddressRepository.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\Repository\\AddressRepository.cs",
+              "RelativeToolTip": "Authentication\\Repository\\AddressRepository.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAYwDAAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T10:27:08.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IAddressRepository.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\IRepository\\IAddressRepository.cs",
+              "RelativeDocumentMoniker": "Authentication\\IRepository\\IAddressRepository.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\IRepository\\IAddressRepository.cs",
+              "RelativeToolTip": "Authentication\\IRepository\\IAddressRepository.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAuwAsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T10:25:27.961Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddressController.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\Authentication\\Controllers\\AddressController.cs",
+              "RelativeDocumentMoniker": "Authentication\\Controllers\\AddressController.cs",
+              "ToolTip": "E:\\VegetableShop1\\Authentication\\Controllers\\AddressController.cs",
+              "RelativeToolTip": "Authentication\\Controllers\\AddressController.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAcwDgAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T10:23:48.988Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ShoppingCartRepository.cs",
+              "DocumentMoniker": "E:\\VegetableShop1\\ShoppingCartAPI\\Repository\\ShoppingCartRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingCartAPI\\Repository\\ShoppingCartRepository.cs",
+              "ToolTip": "E:\\VegetableShop1\\ShoppingCartAPI\\Repository\\ShoppingCartRepository.cs",
+              "RelativeToolTip": "ShoppingCartAPI\\Repository\\ShoppingCartRepository.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwB8AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T13:06:58.302Z",
               "EditorCaption": ""
             }
           ]

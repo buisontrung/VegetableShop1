@@ -150,7 +150,54 @@ namespace ProductAPI.Repository
 				}).ToList()
 			};
 		}
+		public async Task<IEnumerable<ProductDTO?>> GetProductsByVariantIdsAsync(List<int> varianIds)
+		{
+			// Fetch all product variants and associated products in one query
+			var variants = await _context.ProductVariants
+				.Where(v => varianIds.Contains(v.Id))
+				.Include(v => v.ProductInventorySuppliers)
+				.Include(v => v.Product)
+				.ThenInclude(p => p.Images)
+				.Include(v => v.Product)
+				.ThenInclude(p => p.ProductCategory)
+				.ToListAsync();
 
+			// Map results to ProductDTO
+			var productDTOs = variants.Select(variant => new ProductDTO
+			{
+				Id = variant.Product.Id,
+				ProductName = variant.Product.ProductName,
+				Description = variant.Product.Description,
+				Price = variant.Product.Price,
+				ImageUrl = variant.Product.ImageUrl,
+				IsActive = variant.Product.IsActive,
+				ProductCategoryId = variant.Product.ProductCategoryId,
+				productCategoryDTO = new ProductCategoryDTO
+				{
+					Id = variant.Product.ProductCategory.Id,
+					ProductCategoryName = variant.Product.ProductCategory.ProductCategoryName,
+				},
+				productImageDTOs = variant.Product.Images.Select(img => new ProductImageDTO
+				{
+					Id = img.Id,
+					ImageUrl = img.ImageUrl,
+					ProductId = img.ProductId
+				}).ToList(),
+				productVariantDTOs = variant.Product.Variants?.Select(v => new ProductVariantDTO
+				{
+					Id = v.Id,
+					ProductId = v.ProductId,
+					UnitPrice = v.UnitPrice,
+					VariantName = v.VariantName,
+					ProductInventorySuppliers = v.ProductInventorySuppliers.Select(supplier => new ProductInventorySupplierDTO
+					{
+						Quantity = supplier.Quantity,
+					}).ToList()
+				}).ToList()
+			}).ToList();
+
+			return productDTOs;
+		}
 
 		public async Task<IEnumerable<ProductDTO?>> GetProductByCategoryIdAsync(int categoryId)
 		{

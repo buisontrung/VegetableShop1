@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Payment")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b4a8a55480508fee6501d519a5f7bcca5f77a3d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Payment")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Payment")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,5 +14,6 @@ namespace ShoppingCartAPI.Model
 		public int Price { get; set; }	
 		public DateTime Created { get; set; }
 
+		public bool? IsChecked { get; set; }
 	}
 }

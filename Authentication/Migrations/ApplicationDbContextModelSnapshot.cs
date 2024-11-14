@@ -22,6 +22,46 @@ namespace Authentication.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Authentication.Model.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AddressName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("District")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsPrimary")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("PhoneNumberAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("UserNameAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WardsCommunes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Addresses");
+                });
+
             modelBuilder.Entity("Authentication.Model.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
@@ -102,7 +142,6 @@ namespace Authentication.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClientId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Expiration")
@@ -259,6 +298,17 @@ namespace Authentication.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Authentication.Model.Address", b =>
+                {
+                    b.HasOne("Authentication.Model.ApplicationUser", "ApplicationUser")
+                        .WithMany("Address")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ApplicationUser");
+                });
+
             modelBuilder.Entity("Authentication.Model.RefreshToken", b =>
                 {
                     b.HasOne("Authentication.Model.ApplicationUser", "User")
@@ -323,6 +373,8 @@ namespace Authentication.Migrations
 
             modelBuilder.Entity("Authentication.Model.ApplicationUser", b =>
                 {
+                    b.Navigation("Address");
+
                     b.Navigation("RefreshTokens");
                 });
 #pragma warning restore 612, 618

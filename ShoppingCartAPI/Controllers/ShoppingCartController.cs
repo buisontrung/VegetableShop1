@@ -35,6 +35,12 @@ namespace ShoppingCartAPI.Controllers
 		{
 			return await _shoppingCartRepository.AddToCartAsync(a);
 		}
+		[HttpDelete("Delete")]
+		public async Task<IActionResult> Delete([FromBody]List<int> Ids)
+		{
+			 await _shoppingCartRepository.RemoveCartItemAsync(Ids);
+			return Ok("delete thanh cong");
+		}
 
 	} 
 }

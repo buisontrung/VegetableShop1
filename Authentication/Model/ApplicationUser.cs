@@ -9,5 +9,6 @@ namespace Authentication.Model
 		public string? FirstName { get; set; }
 		public string? LastName { get; set; }
 		public virtual ICollection<RefreshToken> RefreshTokens { get; set; }
+		public virtual ICollection<Address> Address { get; set; }
 	}
 }

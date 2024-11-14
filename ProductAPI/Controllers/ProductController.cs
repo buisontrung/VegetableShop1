@@ -59,6 +59,12 @@ namespace ProductAPI.Controllers
 			}
 			return Ok(product);
 		}
+		[HttpGet("getvarians")]
+		public async Task<ActionResult<IEnumerable<ProductDTO?>>> GetAllVarianIds([FromQuery] List<int> Ids)
+		{
+			var products = await _productRepository.GetProductsByVariantIdsAsync(Ids);
+			return Ok(products);
+		}
 		[HttpGet("productcategoryid={id}")]
 		public async Task<ActionResult<IEnumerable<ProductDTO>>> GetProductByProductCategoryId(int id)
 		{

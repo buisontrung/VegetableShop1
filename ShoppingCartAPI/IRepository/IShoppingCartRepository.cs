@@ -9,7 +9,7 @@ namespace ShoppingCartAPI.IRepository
 		Task<ShoppingCarts?> GetCartItemByVarianIdUserIdAsync(int productVarianId, string userId);
 		Task<ShoppingCarts?> AddToCartAsync(ShoppingCarts cartItem);
 		Task UpdateCartItemAsync(ShoppingCarts cartItem);
-		Task RemoveCartItemAsync(int cartItemId);
+		Task RemoveCartItemAsync(List<int> Ids);
 		Task ClearCartAsync(string userId);
 		Task<int> GetCartTotalAsync(string userId);
 	}

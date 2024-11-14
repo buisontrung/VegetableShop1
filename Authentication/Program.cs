@@ -1,6 +1,8 @@
 ﻿
 using Authentication.Data;
+using Authentication.IRepository;
 using Authentication.Model;
+using Authentication.Repository;
 using Authentication.Services;
 using Authentication.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -22,7 +24,7 @@ namespace Authentication
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 			);
 
-			
+			builder.Services.AddScoped<IAddressRepository,AddressRepository>();
 			builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 				.AddEntityFrameworkStores<ApplicationDbContext>()
 				.AddDefaultTokenProviders();

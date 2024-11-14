@@ -77,7 +77,7 @@ namespace Authentication.Controllers
 				Id = user.Id,
 				FirstName = user.FirstName,
 				LastName = user.LastName,
-
+				PhoneNumber = user.PhoneNumber,
 				Email = user.Email
 			};
 
@@ -126,6 +126,7 @@ namespace Authentication.Controllers
 				SecurityStamp = Guid.NewGuid().ToString(),
 			};
 			var createUserResult = await _userManager.CreateAsync(newUser, user.Password);
+			
 			if (!createUserResult.Succeeded)
 			{
 				var ErrorString = "User Create Error Because :";
@@ -135,10 +136,9 @@ namespace Authentication.Controllers
 				}
 				return BadRequest(ErrorString);
 			}
+			var token1 = await _userManager.GenerateEmailConfirmationTokenAsync(newUser);
+			await _userManager.ConfirmEmailAsync(newUser, token1);
 			await _userManager.AddToRoleAsync(newUser, "user");
-
-
-
 			string token = await GenerateNewJsonWebToken(newUser);
 			string refreshtoken = GenerateRefreshToken(9);
 			var refreshtokenModel = new RefreshToken()

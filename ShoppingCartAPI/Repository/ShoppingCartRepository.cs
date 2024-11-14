@@ -79,7 +79,7 @@ namespace ShoppingCart.API.Repository
 		public async Task<ShoppingCarts?> AddToCartAsync(ShoppingCarts cartItem)
 		{
 			var checkItem = await _context.ShoppingCarts
-				.Where(c => c.UserId == cartItem.UserId  && c.ProductVarianId == c.ProductVarianId)
+				.Where(c => c.UserId == cartItem.UserId  && c.ProductVarianId == cartItem.ProductVarianId)
 				.FirstOrDefaultAsync();
 			if (checkItem != null)
 			{
@@ -99,15 +99,28 @@ namespace ShoppingCart.API.Repository
 			await _context.SaveChangesAsync();
 		}
 
-		public async Task RemoveCartItemAsync(int cartItemId)
+		public async Task RemoveCartItemAsync(List<int> Ids)
 		{
-			var cartItem = await _context.ShoppingCarts.FindAsync(cartItemId);
-			if (cartItem != null)
+			var cartItemsToRemove = new List<ShoppingCarts>();
+
+			// Lấy tất cả các mục cần xóa một lần
+			foreach (var Id in Ids)
 			{
-				_context.ShoppingCarts.Remove(cartItem);
+				var cartItem = await _context.ShoppingCarts.FindAsync(Id);
+				if (cartItem != null)
+				{
+					cartItemsToRemove.Add(cartItem);
+				}
+			}
+
+			// Xóa tất cả các mục đã tìm thấy và lưu thay đổi một lần
+			if (cartItemsToRemove.Any())
+			{
+				_context.ShoppingCarts.RemoveRange(cartItemsToRemove);
 				await _context.SaveChangesAsync();
 			}
 		}
+
 
 		public async Task ClearCartAsync(string userId)
 		{

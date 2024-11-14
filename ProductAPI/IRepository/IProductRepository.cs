@@ -17,5 +17,6 @@ namespace ProductAPI.IRepository
 		Task DeleteProductAsync(int id);
 		Task<IEnumerable<ProductDTO>> GetProductsByOrder(string orderType,int pageSize ,int pageIndex,int categoryId);
 		Task <int> CountProductByCategoryId(int categoryId);
+		Task<IEnumerable<ProductDTO?>> GetProductsByVariantIdsAsync(List<int> varianIds);
 	}
 }

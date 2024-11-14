@@ -12,5 +12,6 @@ namespace Authentication.Data
 		}
 		public DbSet<RefreshToken> RefreshTokens { get; set; }
 		public new DbSet<ApplicationUser> Users { get; set; }
+		public DbSet<Address> Addresses { get; set; }
 	}
 }
