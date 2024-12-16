@@ -8,6 +8,9 @@ namespace ProductAPI.IRepository
 {
 	public interface IProductRepository
 	{
+		Task<ProductVariantDTO> GetAllProductVariantName(string productName, string variantName);
+		Task<IEnumerable<ProductVariantDTO>> GetAllProductVariantsName(string productName);
+		Task<IEnumerable<ResponseProductDialog>> GetAllProductsName(string categoryName);
 		Task<IEnumerable<ProductDTO>> GetAllProductsAsync();
 		Task<ProductDTO?> GetProductByIdAsync(int id);
 		Task<ProductDTO?> GetProductByVarianIdAsync(int id);

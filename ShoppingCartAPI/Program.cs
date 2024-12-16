@@ -8,6 +8,7 @@ using ShoppingCartAPI.IRepository;
 using ShoppingCartAPI.IServices;
 using ShoppingCartAPI.Services;
 using System.Text;
+using ShoppingCartAPI.hub;
 
 namespace ShoppingCartAPI
 {
@@ -23,9 +24,11 @@ namespace ShoppingCartAPI
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
+			builder.Services.AddMemoryCache();
 			builder.Services.AddHttpClient<IProductService, ProductService>();
-			builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
 
+			builder.Services.AddScoped<IShoppingCartRepository, ShoppingCartRepository>();
+			builder.Services.AddSignalR();
 			builder.Services.AddDbContext<ApplicationDbContext>(options =>
 			{
 
@@ -54,20 +57,29 @@ namespace ShoppingCartAPI
 					IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
 				};
 			});
+			builder.Services.AddCors(options =>
+			{
+				options.AddPolicy("AllowSpecificOrigin", policy =>
+				{
+					policy.WithOrigins("http://localhost:5173") // Thay th? b?ng URL c?a b?n
+						  .AllowAnyMethod()
+						  .AllowAnyHeader()
+						  .AllowCredentials(); // Cho phép g?i thông tin xác th?c
+				});
+			});
 			var app = builder.Build();
-
+			app.MapHub<CartHub>("/cartHub");
 			// Configure the HTTP request pipeline.
 			if (app.Environment.IsDevelopment())
 			{
 				app.UseSwagger();
 				app.UseSwaggerUI();
 			}
-
+			app.UseCors("AllowSpecificOrigin");
 			app.UseHttpsRedirection();
 
 			app.UseAuthentication();
 			app.UseAuthorization();
-
 
 			app.MapControllers();
 

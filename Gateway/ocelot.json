@@ -37,15 +37,15 @@
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {
-      "DownstreamPathTemplate": "/{controller}/{everything}",
+      "DownstreamPathTemplate": "/api/{controller}/{everything}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 7003
+          "Port": 7159
         }
       ],
-      "UpstreamPathTemplate": "/order/{controller}/{everything}",
+      "UpstreamPathTemplate": "/order/api/{controller}/{everything}",
       "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
     },
     {

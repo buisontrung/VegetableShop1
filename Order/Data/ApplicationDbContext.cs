@@ -14,7 +14,6 @@ namespace Order.Data
 		public DbSet<Order.Model.Order> Orders { get; set; }
 		public DbSet<OrderDetail> OrderDetails { get; set; }
 		public DbSet<Promotion> PromotionDetails { get; set;}
-		public DbSet<Payment> Payments { get; set; }
 		public DbSet<PaymentMethod> PaymentMethods { get; set; }
 	}
 }

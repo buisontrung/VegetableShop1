@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Post.hub;
+using System.Diagnostics;
 namespace Post.Controllers
 {
 	
@@ -19,17 +20,25 @@ namespace Post.Controllers
 		{
 			private readonly IPostRepository _postRepository;
 			private readonly IHubContext<CommentHub> _commentHubContext;
-			public PostController(IPostRepository postRepository, IHubContext<CommentHub> commentHubContext)
+			private readonly ILogger<PostController> _logger;
+			public PostController(IPostRepository postRepository, IHubContext<CommentHub> commentHubContext, ILogger<PostController> logger)
 			{
 				_postRepository = postRepository;
 				_commentHubContext = commentHubContext;
+				_logger = logger;
 			}
 
 			// Lấy danh sách tất cả bài viết
 			[HttpGet("getall")]
 			public async Task<ActionResult<IEnumerable<postDTO>>> GetAllPosts()
 			{
+				var stopwatch = new Stopwatch();
+				stopwatch.Start();
 				var posts = await _postRepository.GetAllAsync();
+				stopwatch.Stop();
+				var elapsedTime = stopwatch.ElapsedMilliseconds;
+
+				_logger.LogInformation($"API Call GetAllProducts took {elapsedTime} ms.");
 				return Ok(posts);
 			}
 
@@ -37,13 +46,14 @@ namespace Post.Controllers
 			[HttpGet("{id}")]
 			public async Task<ActionResult<postDTO>> GetPostById(string id)
 			{
+				
 				var post = await _postRepository.GetByIdAsync(id);
 
 				if (post == null)
 				{
 					return NotFound();
 				}
-
+			
 				return Ok(post);
 			}
 

@@ -200,6 +200,54 @@ namespace Authentication.Controllers
 			};
 			return Ok(tokenresult);
 		}
+		[HttpPost]
+		[Route("Adminlogin")]
+		public async Task<IActionResult> LoginAdmin([FromBody] LoginDTO user)
+		{
+			var exitUser = await _userManager.FindByNameAsync(user.UserName);
+			
+			if (exitUser is null)
+			{
+				return Unauthorized("NotFound UserName");
+			}
+			var roles = await _userManager.GetRolesAsync(exitUser);
+			bool isAdmin = roles.Contains("admin");
+			if (!isAdmin)
+			{
+				return Unauthorized("User does not have Admin role");
+			}
+			var checkPassword = await _userManager.CheckPasswordAsync(exitUser, user.Password);
+			if (!checkPassword)
+			{
+				return Unauthorized("Password is incorrect");
+			}
+			var existingToken = await _dbContext.RefreshTokens.FirstOrDefaultAsync(t => t.UserId == exitUser.Id && !t.IsRevoked);
+			if (existingToken != null)
+			{
+				existingToken.IsRevoked = true;
+				_dbContext.RefreshTokens.Update(existingToken);
+				await _dbContext.SaveChangesAsync();
+			}
+			string newRefreshToken = GenerateRefreshToken(9);
+
+			var refreshTokenModel = new RefreshToken()
+			{
+				Token = newRefreshToken,
+				UserId = exitUser.Id,
+				Expiration = DateTime.Now.AddDays(30),
+				IsRevoked = false,
+			};
+
+			await _dbContext.RefreshTokens.AddAsync(refreshTokenModel);
+			await _dbContext.SaveChangesAsync();
+			var token = await GenerateNewJsonWebToken(exitUser);
+			var tokenresult = new TokenModel()
+			{
+				Token = token,
+				refreshToken = newRefreshToken
+			};
+			return Ok(tokenresult);
+		}
 
 		[HttpPost("signin-google")]
 		public async Task<IActionResult> SignInWithGoogle([FromBody] GoogleTokenDTO tokenDTO)

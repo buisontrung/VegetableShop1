@@ -35,6 +35,12 @@ namespace ShoppingCartAPI.Controllers
 		{
 			return await _shoppingCartRepository.AddToCartAsync(a);
 		}
+		[HttpPut("update")]
+		public async Task<IActionResult> Update(ShoppingCarts a)
+		{
+			 await _shoppingCartRepository.UpdateCartItemAsync(a);
+			return Ok();
+		}
 		[HttpDelete("Delete")]
 		public async Task<IActionResult> Delete([FromBody]List<int> Ids)
 		{

@@ -25,7 +25,6 @@ namespace ProductAPI.Repository
 				{
 					Id = pis.Id,
 					ProductVariantId = pis.ProductVariantId,
-					SupplierId = pis.SupplierId,
 					InventoryId = pis.InventoryId,
 					Quantity = pis.Quantity
 				})
@@ -41,7 +40,6 @@ namespace ProductAPI.Repository
 			{
 				Id = entity.Id,
 				ProductVariantId = entity.ProductVariantId,
-				SupplierId = entity.SupplierId,
 				InventoryId = entity.InventoryId,
 				Quantity = entity.Quantity
 			};
@@ -52,7 +50,6 @@ namespace ProductAPI.Repository
 			var entity = new ProductInventorySupplier
 			{
 				ProductVariantId = productInventorySupplierDto.ProductVariantId,
-				SupplierId = productInventorySupplierDto.SupplierId,
 				InventoryId = productInventorySupplierDto.InventoryId,
 				Quantity = productInventorySupplierDto.Quantity
 			};
@@ -70,7 +67,7 @@ namespace ProductAPI.Repository
 			if (entity == null) return null;
 
 			entity.ProductVariantId = productInventorySupplierDto.ProductVariantId;
-			entity.SupplierId = productInventorySupplierDto.SupplierId;
+
 			entity.InventoryId = productInventorySupplierDto.InventoryId;
 			entity.Quantity = productInventorySupplierDto.Quantity;
 

@@ -170,16 +170,11 @@ namespace ProductAPI.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("SupplierId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("InventoryId");
 
                     b.HasIndex("ProductVariantId");
-
-                    b.HasIndex("SupplierId");
 
                     b.ToTable("ProductInventorySupplier");
                 });
@@ -192,7 +187,13 @@ namespace ProductAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<decimal?>("PriceSale")
+                        .HasColumnType("decimal(18,2)");
+
                     b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SaleId")
                         .HasColumnType("int");
 
                     b.Property<decimal>("UnitPrice")
@@ -204,6 +205,8 @@ namespace ProductAPI.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
+
+                    b.HasIndex("SaleId");
 
                     b.ToTable("ProductVariants");
                 });
@@ -234,6 +237,9 @@ namespace ProductAPI.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("ProductId");
@@ -241,26 +247,29 @@ namespace ProductAPI.Migrations
                     b.ToTable("Reviews");
                 });
 
-            modelBuilder.Entity("ProductAPI.Model.Supplier", b =>
+            modelBuilder.Entity("ProductAPI.Model.Sale", b =>
                 {
-                    b.Property<int>("SupplierId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SupplierId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("ContactInfo")
+                    b.Property<decimal>("DiscountPercentage")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SaleName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
 
-                    b.Property<string>("SupplierName")
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("Id");
 
-                    b.HasKey("SupplierId");
-
-                    b.ToTable("Suppliers");
+                    b.ToTable("Sales");
                 });
 
             modelBuilder.Entity("ProductAPI.Model.Product", b =>
@@ -304,17 +313,9 @@ namespace ProductAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ProductAPI.Model.Supplier", "Supplier")
-                        .WithMany()
-                        .HasForeignKey("SupplierId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Inventory");
 
                     b.Navigation("ProductVariant");
-
-                    b.Navigation("Supplier");
                 });
 
             modelBuilder.Entity("ProductAPI.Model.ProductVariant", b =>
@@ -323,7 +324,13 @@ namespace ProductAPI.Migrations
                         .WithMany("Variants")
                         .HasForeignKey("ProductId");
 
+                    b.HasOne("ProductAPI.Model.Sale", "Sale")
+                        .WithMany("ProductVariants")
+                        .HasForeignKey("SaleId");
+
                     b.Navigation("Product");
+
+                    b.Navigation("Sale");
                 });
 
             modelBuilder.Entity("ProductAPI.Model.Review", b =>
@@ -357,6 +364,11 @@ namespace ProductAPI.Migrations
             modelBuilder.Entity("ProductAPI.Model.ProductVariant", b =>
                 {
                     b.Navigation("ProductInventorySuppliers");
+                });
+
+            modelBuilder.Entity("ProductAPI.Model.Sale", b =>
+                {
+                    b.Navigation("ProductVariants");
                 });
 #pragma warning restore 612, 618
         }

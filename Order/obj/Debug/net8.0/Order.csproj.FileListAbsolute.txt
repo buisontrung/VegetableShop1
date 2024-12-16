@@ -142,3 +142,4 @@ E:\VegetableShop1\Order\obj\Debug\net8.0\refint\Order.dll
 E:\VegetableShop1\Order\obj\Debug\net8.0\Order.pdb
 E:\VegetableShop1\Order\obj\Debug\net8.0\Order.genruntimeconfig.cache
 E:\VegetableShop1\Order\obj\Debug\net8.0\ref\Order.dll
+E:\VegetableShop1\Order\bin\Debug\net8.0\Newtonsoft.Json.dll

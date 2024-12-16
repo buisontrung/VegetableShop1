@@ -5,19 +5,32 @@ namespace Order.ModelDto
 {
 	public class OrderRequestDTO
 	{
+		public int? Id { get; set; }
 		public string? Code { get; set; }
-		[Required(ErrorMessage = "Tên người nhận không được để trống")]
+
+		public string? Email { get; set; }
 		public string? CustomerName { get; set; }
-		[Required(ErrorMessage = "Số điện thoại không được để trống")]
+
 		public string? Phone { get; set; }
-		[Required(ErrorMessage = "Địa chỉ không được để trống")]
+		
 		public string? Address { get; set; }
 		public int? PromotionId { get; set; }
-
+		public string? UserId { get; set; }
 		public decimal TotalAmount { get; set; }
 		public decimal? DiscountAmount { get; set; }
 		public int Quantity { get; set; }
-		public string? TypePayment { get; set; }
+		public int? PaymentMethodId { get; set; }
+		public DateTime? CreateDate { get; set; }
+		public  int? Status { get; set; }
+		public bool IsPayment { get; set; }
 		public List<CartItemDto>? Items { get; set; }
+		public PromotionDTO? Promotion { get; set; }
+		public void CalculateTotals()
+		{
+			Code = "DH" + DateTime.Now.ToString("yyyyMMddHHmmss");
+			TotalAmount = Items?.Sum(item => item.Quantity * item.Price) + 20000 ?? 0;
+			Quantity = Items?.Sum(item => item.Quantity) ?? 0;
+			DiscountAmount = TotalAmount * (1 - (Promotion !=null ? Promotion.DiscountPercentage : 0));
+		}
 	}
 }

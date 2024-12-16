@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jzRgXlzvSL0ZHDktZXv875dduvPcx5T1oHkW+TzjXtKG2iHDRbRRY0fa+UPuO6WVaNLAqypE+NhXsbgnpFbXaA==",
+  "dgSpecHash": "vsBVVEyFYamlYvIyEkTtg6YHjPhpIm8vcrQVAAyjVRe1A5z1D5KGSlU8yPTRXW7La9CUVzXjDkCapUDIFYQC7A==",
   "success": true,
   "projectFilePath": "E:\\VegetableShop1\\Order\\Order.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\mimekit\\4.8.0\\mimekit.4.8.0.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\FPTSHOP\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\FPTSHOP\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

@@ -1,4 +1,4 @@
-
+﻿
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -23,6 +23,7 @@ namespace ProductAPI
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
+			builder.Services.AddHttpClient();
 			builder.Services.AddDbContext<ApplicationDbContext>(options =>
 			{
 
@@ -30,13 +31,15 @@ namespace ProductAPI
 				options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
 				;
 			});
+			builder.Services.AddMemoryCache();
 			builder.Services.AddScoped<IProductCategoryRepository,ProductCategoryRepository>();
 			builder.Services.AddScoped<IProductInventorySupplierRepository, ProductInventorySupplierRepository>();
-			builder.Services.AddScoped<ISupplierRepository,SupplierRepository>();
+			//builder.Services.AddScoped<ISupplierRepository,SupplierRepository>();
 			builder.Services.AddScoped<IInventoryRepository,InventoryRepository>();
 			builder.Services.AddScoped<IProductVariantRepository, ProductVariantRepository>();
 			builder.Services.AddScoped<IProductRepository,ProductRepository>();
 			builder.Services.AddScoped<IFileService, FileService>();
+			builder.Services.AddScoped<IRepositoryReview, RepositoryReview>();
 			builder.Services.AddScoped<IBlobStorageService,BlobStorageService>();
 			builder.Services.AddAuthentication(options =>
 			{
@@ -59,6 +62,15 @@ namespace ProductAPI
 					IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
 				};
 			});
+			builder.Services.AddCors(options =>
+			{
+				options.AddPolicy("AllowAll", policy =>
+				{
+					policy.AllowAnyOrigin()     // Cho phép tất cả các origin
+						  .AllowAnyMethod()     // Cho phép bất kỳ phương thức HTTP nào (GET, POST, PUT, DELETE, ...)
+						  .AllowAnyHeader();    // Cho phép bất kỳ header nào
+				});
+			});
 			var app = builder.Build();
 
 			// Configure the HTTP request pipeline.
@@ -78,7 +90,7 @@ namespace ProductAPI
 
 			app.UseAuthorization();
 
-
+			app.UseCors("AllowAll");
 			app.MapControllers();
 
 			app.Run();

@@ -18,7 +18,7 @@ namespace ProductAPI.Data
 		public DbSet<Review> Reviews { get; set; }
 		public DbSet<ProductInventorySupplier> ProductInventorySupplier { get; set; }
 		public DbSet<ProductInventoryLog> productInventoryLogs { get; set; }
-		public DbSet<Supplier> Suppliers { get; set; }
+		public DbSet<Sale> Sales { get; set; }
 		public DbSet<ProductImage> ProductImages { get; set; }
 	}
 }

@@ -18,6 +18,18 @@ namespace ProductAPI.Controllers
 			_productRepository = productRepository;
 			_fileService = fileService;
 		}
+		[HttpGet("getproductnameall")]
+		public async Task<ActionResult<IEnumerable<ResponseProductDialog>>> GetAllProducts(string categoryName)
+		{
+			var products = await _productRepository.GetAllProductsName(categoryName);
+			return Ok(products);
+		}
+		[HttpGet("getvariant")]
+		public async Task<ActionResult<IEnumerable<ProductDTO>>> GetVariant(string productname,string varriant)
+		{
+			var products = await _productRepository.GetAllProductVariantName(productname,varriant);
+			return Ok(products);
+		}
 
 		[HttpGet("getall")]	
 		public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts()

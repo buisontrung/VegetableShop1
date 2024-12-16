@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
 using ShoppingCartAPI.Data;
 using ShoppingCartAPI.IRepository;
 using ShoppingCartAPI.IServices;
@@ -14,36 +16,51 @@ namespace ShoppingCart.API.Repository
 	{
 		private readonly ApplicationDbContext _context;
 		private readonly IProductService _productService;
-
-		public ShoppingCartRepository(ApplicationDbContext context,IProductService productService)
+		private readonly IMemoryCache _memoryCache;
+		public ShoppingCartRepository(ApplicationDbContext context,IProductService productService,IMemoryCache memoryCache)
 		{
 			_context = context;
 			_productService = productService;	
+			_memoryCache = memoryCache;
 		}
 
 		public async Task<ICollection<object?>> GetCartItemsbyUserIdAsync(string userId)
 		{
-			// Retrieve the cart items for the specified user
+			// Kiểm tra cache trước
+			if (_memoryCache.TryGetValue($"CartItems_{userId}", out ICollection<object?> cachedCartItems))
+			{
+				// Nếu dữ liệu có trong cache, trả về dữ liệu từ cache
+				return cachedCartItems;
+			}
+
+			// Truy vấn từ database nếu không có trong cache
 			var cart = await _context.ShoppingCarts
 									 .Where(cart => cart.UserId == userId)
+		
 									 .ToListAsync();
 
-			// Initialize a list to store the product information
 			ICollection<object?> cartList = new List<object?>();
-			
-			// Loop through each cart item to retrieve product information
+
 			foreach (var cartItem in cart)
 			{
-				// Retrieve product information by product variant ID
 				var productInfo = await _productService.GetProductByIdAsync(cartItem.ProductVarianId);
 				cartList.Add(new
 				{
 					ShoppingCart = cartItem,
 					Product = productInfo
-				}); // Add product info to the list
+				});
 			}
 
-			// Return the list of product information
+			// Lưu dữ liệu vào cache với thời gian hết hạn (ví dụ: 5 phút)
+			var cacheOptions = new MemoryCacheEntryOptions
+			{
+				AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(15), // Hết hạn sau 5 phút
+				SlidingExpiration = TimeSpan.FromMinutes(2) // Làm mới cache nếu được truy cập
+			};
+
+			_memoryCache.Set($"CartItems_{userId}", cartList, cacheOptions);
+
+			// Trả về danh sách dữ liệu
 			return cartList;
 		}
 
@@ -95,8 +112,19 @@ namespace ShoppingCart.API.Repository
 
 		public async Task UpdateCartItemAsync(ShoppingCarts cartItem)
 		{
+			var cacheKey = $"CartItems_{cartItem.UserId}";
+
+			// Remove the cache from memory
+			_memoryCache.Remove(cacheKey);
+			// Update the cart item in the database
 			_context.ShoppingCarts.Update(cartItem);
 			await _context.SaveChangesAsync();
+			await GetCartItemsbyUserIdAsync(cartItem.UserId);
+			// Invalidate or update the cache
+			// Remove existing cache
+
+			// Optionally, re-fetch data and set it back to the cache
+
 		}
 
 		public async Task RemoveCartItemAsync(List<int> Ids)

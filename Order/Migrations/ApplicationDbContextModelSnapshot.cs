@@ -45,6 +45,15 @@ namespace Order.Migrations
                     b.Property<decimal?>("DiscountAmount")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsPayment")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("PaymentMethodId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Phone")
                         .HasColumnType("nvarchar(max)");
 
@@ -54,16 +63,18 @@ namespace Order.Migrations
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int?>("Status")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("TotalAmount")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("TypePayment")
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PaymentMethodId");
 
                     b.HasIndex("PromotionId");
 
@@ -97,7 +108,7 @@ namespace Order.Migrations
                     b.ToTable("OrderDetails");
                 });
 
-            modelBuilder.Entity("Order.Model.Payment", b =>
+            modelBuilder.Entity("Order.Model.PaymentMethod", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -105,42 +116,10 @@ namespace Order.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<decimal>("Amount")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<bool>("IsPayment")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("OrderId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("PaymentDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PaymentMethodId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
-
-                    b.HasIndex("PaymentMethodId");
-
-                    b.ToTable("Payments");
-                });
-
-            modelBuilder.Entity("Order.Model.PaymentMethod", b =>
-                {
-                    b.Property<int>("PaymentMethodId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentMethodId"));
-
                     b.Property<string>("PaymentName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("PaymentMethodId");
+                    b.HasKey("Id");
 
                     b.ToTable("PaymentMethods");
                 });
@@ -181,9 +160,15 @@ namespace Order.Migrations
 
             modelBuilder.Entity("Order.Model.Order", b =>
                 {
+                    b.HasOne("Order.Model.PaymentMethod", "PaymentMethod")
+                        .WithMany()
+                        .HasForeignKey("PaymentMethodId");
+
                     b.HasOne("Order.Model.Promotion", "Promotion")
                         .WithMany("Orders")
                         .HasForeignKey("PromotionId");
+
+                    b.Navigation("PaymentMethod");
 
                     b.Navigation("Promotion");
                 });
@@ -199,33 +184,9 @@ namespace Order.Migrations
                     b.Navigation("Order");
                 });
 
-            modelBuilder.Entity("Order.Model.Payment", b =>
-                {
-                    b.HasOne("Order.Model.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Order.Model.PaymentMethod", "PaymentMethod")
-                        .WithMany("Payments")
-                        .HasForeignKey("PaymentMethodId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-
-                    b.Navigation("PaymentMethod");
-                });
-
             modelBuilder.Entity("Order.Model.Order", b =>
                 {
                     b.Navigation("OrderDetails");
-                });
-
-            modelBuilder.Entity("Order.Model.PaymentMethod", b =>
-                {
-                    b.Navigation("Payments");
                 });
 
             modelBuilder.Entity("Order.Model.Promotion", b =>

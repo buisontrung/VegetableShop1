@@ -1,13 +1,17 @@
-﻿namespace ProductAPI.ModelDto
+﻿using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+
+namespace ProductAPI.ModelDto
 {
 	public class ProductDTO
 	{
 		public int? Id { get; set; }
 		public string? ProductName { get; set; }
 		public string? Description { get; set; }
+		public decimal? PriceSale { get; set; }
 		public decimal? Price { get; set; }
 		public IFormFile? ImageFile { get; set; }
-
+		public decimal? MinPrice { get; set; }
+		public decimal? MaxPrice { get; set; }
 		public string? ImageUrl { get; set; }
 		public bool IsActive { get; set; } = true;
 		public int? ProductCategoryId { get; set; }

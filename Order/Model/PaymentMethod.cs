@@ -1,10 +1,14 @@
-﻿namespace Order.Model
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Order.Model
 {
 	public class PaymentMethod
 	{
-		public int PaymentMethodId { get; set; } 
+		[Key]
+		[DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
+		public int Id { get; set; } 
 		public string? PaymentName { get; set; } 
 
-		public virtual ICollection<Payment>? Payments { get; set; } 
 	}
 }
