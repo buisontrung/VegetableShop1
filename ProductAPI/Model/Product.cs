@@ -15,13 +15,13 @@ namespace ProductAPI.Model
 
 		[Range(0, double.MaxValue)]
 		public decimal? Price { get; set; }
-		public decimal? PriceSale { get; set; }
+
 		public string? ImageUrl { get; set; } 
 
 		public bool IsActive { get; set; } = true;  
 
 		public int? ProductCategoryId { get; set; }  
-		public string? MeasurementUnit { get; set; }
+
 
 		public virtual ProductCategory? ProductCategory { get; set; } 
 	

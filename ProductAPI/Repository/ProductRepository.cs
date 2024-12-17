@@ -46,7 +46,7 @@ namespace ProductAPI.Repository
 					ImageUrl = p.ImageUrl, // Primary image URL if available
 					IsActive = p.IsActive,
 					ProductCategoryId = p.ProductCategoryId,
-					PriceSale = p.PriceSale,
+
 					productCategoryDTO = new ProductCategoryDTO // Change to single mapping
 					{
 						Id = p.ProductCategory.Id,
@@ -323,7 +323,7 @@ namespace ProductAPI.Repository
 					ProductName = p.ProductName,
 					Description = p.Description,
 					Price = p.Price,
-					PriceSale =p.PriceSale,
+
 					ImageUrl = p.ImageUrl,
 					IsActive = p.IsActive,
 					ProductCategoryId = p.ProductCategoryId
@@ -436,6 +436,62 @@ namespace ProductAPI.Repository
 			}
 		}
 
+		public async Task<IEnumerable<ProductDTO>> GetProductRatingMax(int pageSize, int pageIndex)
+		{
+			// Tạo khóa bộ nhớ cache duy nhất cho các tham số
+			string cacheKey = $"products_orderMax_size_{pageSize}_index_{pageIndex}";
+
+			// Kiểm tra bộ nhớ cache trước
+			if (!_memoryCache.TryGetValue(cacheKey, out IEnumerable<ProductDTO> cachedProducts))
+			{
+				// Truy vấn cơ sở dữ liệu
+				var query = _context.Products
+					.Include(p => p.Reviews) // Include bảng Reviews liên quan
+					.Include(p => p.Variants) // Include bảng ProductVariants liên quan
+					.Include(p=>p.Images)
+					.AsNoTracking() // Không theo dõi trạng thái entity
+					.Select(p => new ProductDTO
+					{
+						Id = p.Id,
+						ProductName = p.ProductName,
+						Description = p.Description,
+						ImageUrl = p.ImageUrl,
+						IsActive = p.IsActive,
+						ProductCategoryId = p.ProductCategoryId,
+						AverageRating = p.Reviews.Any()
+							? p.Reviews.Average(r => r.Rating)
+							: null, // Trả về null nếu không có đánh giá
+						MinPrice = p.Variants.Any()
+							? p.Variants.Min(v => v.UnitPrice)
+							: null, // Trả về null nếu không có biến thể
+						MaxPrice = p.Variants.Any()
+							? p.Variants.Max(v => v.UnitPrice)
+							: null // Trả về null nếu không có biến thể
+						,productImageDTOs = p.Images.Select(x=> new ProductImageDTO { ImageUrl=x.ImageUrl}).ToList()
+					});
+
+				// Sắp xếp trước khi phân trang
+				var sortedQuery = query.OrderByDescending(p => p.AverageRating ?? 0);
+
+				// Phân trang
+				var pagedQuery = sortedQuery
+					.Skip((pageIndex - 1) * pageSize)
+					.Take(pageSize);
+
+				// Thực thi truy vấn và lưu vào bộ nhớ cache
+				cachedProducts = await pagedQuery.ToListAsync();
+
+				// Lưu vào bộ nhớ cache với thời gian hết hạn 1 giờ
+				var cacheOptions = new MemoryCacheEntryOptions
+				{
+					AbsoluteExpirationRelativeToNow = TimeSpan.FromHours(1)
+				};
+				_memoryCache.Set(cacheKey, cachedProducts, cacheOptions);
+			}
+
+			// Trả về kết quả
+			return cachedProducts;
+		}
 
 		public async Task<IEnumerable<ProductDTO>> GetProductsByOrder(string orderType, int pageSize, int pageIndex, int categoryId)
 		{
@@ -477,7 +533,7 @@ namespace ProductAPI.Repository
 							x.product.ImageUrl,
 							x.product.IsActive,
 							x.product.ProductCategoryId,
-							x.product.PriceSale
+
 						},
 						x => new { x.review, x.variant.UnitPrice }
 					)
@@ -488,7 +544,7 @@ namespace ProductAPI.Repository
 						Description = g.Key.Description,
 						ImageUrl = g.Key.ImageUrl,
 						IsActive = g.Key.IsActive,
-						PriceSale = g.Key.PriceSale,
+
 						ProductCategoryId = g.Key.ProductCategoryId,
 						AverageRating = g.Average(r => r.review != null ? r.review.Rating : 0), // Điểm đánh giá trung bình
 						MinPrice = g.Min(r => r.UnitPrice), // Giá thấp nhất từ các biến thể
@@ -520,6 +576,7 @@ namespace ProductAPI.Repository
 			// Trả về kết quả
 			return cachedProducts;
 		}
+
 
 
 

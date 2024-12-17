@@ -29,8 +29,8 @@ namespace ProductAPI.Controllers
 
 			string intentName = request.QueryResult.Intent.DisplayName;
 			string userInput = request.QueryResult.QueryText;
-	
-			
+
+
 			switch (intentName)
 			{
 				case "ChonDanhMuc":
@@ -51,8 +51,35 @@ namespace ProductAPI.Controllers
 					string productList = string.Join(", ", products.Select(p => p.ProductName));
 					return Ok(new { fulfillmentText = $"Danh sách sản phẩm trong danh mục {category}: {productList}" });
 
+				case "SanPhamNoiBat":
+
+					var productRating = await _productRepository.GetProductRatingMax(1,1);
+					var productRating1 = productRating.First();
+					return Ok(new
+					{
+						fulfillmentMessages = new[]
+							{
+								new
+								{
+									card = new
+									{
+										title = productRating1.ProductName,
+										subtitle = "Mô tả: Sản phẩm chất lượng cao.",
+										imageUri = productRating1.productImageDTOs.First().ImageUrl,
+										buttons = new[]
+										{
+											new
+											{
+												text = "Mua ngay",
+												postback =$"http://localhost:5173/#/san-pham/{productRating1.Id}"
+											}
+										}
+									}
+								}
+						}
+					});
 				case "ChonSanPham":
-					string token = request.QueryResult.Parameters["token"]?.ToString();
+
 					string product = request.QueryResult.Parameters["products"]?.ToString();
 					if (string.IsNullOrEmpty(product))
 					{
@@ -62,15 +89,34 @@ namespace ProductAPI.Controllers
 					var variant = await _productRepository.GetAllProductVariantsName(product);
 					if (variant == null || !variant.Any())
 					{
-						return Ok(new { fulfillmentText = $"Không có biến thể nào cho sản phẩm {product},{token}." });
+						return Ok(new { fulfillmentText = $"Không có biến thể nào cho sản phẩm {product}." });
 					}
 					
 
 					
 					string variantList = string.Join(", ", variant.Select(v => $"{v.VariantName} - {v.UnitPrice} VND"));
-					return Ok(new
+					;return Ok(new
 					{
-						fulfillmentText = $"Đây là phân loại của sản phẩm {product}: {variantList}"
+						fulfillmentMessages = new[]
+							{
+								new
+								{
+									card = new
+									{
+										title = "Sản phẩm 1",
+										subtitle = "Mô tả: Sản phẩm chất lượng cao.",
+										imageUri = "https://hoangphucphoto.com/wp-content/uploads/2024/04/anh-tcay-thumb.jpeg",
+										buttons = new[]
+										{
+											new
+											{
+												text = "Mua ngay",
+												postback = "https://example.com/san-pham/1"
+											}
+										}
+									}
+								}
+						}
 					});
 				case "order - yes":
 					return Ok(new

@@ -30,6 +30,12 @@ namespace ProductAPI.Controllers
 			var products = await _productRepository.GetAllProductVariantName(productname,varriant);
 			return Ok(products);
 		}
+		[HttpGet("getProductsRatingMax")]
+		public async Task<ActionResult<IEnumerable<ProductDTO>>> GetRating(int pageSize, int PageIndex)
+		{
+			var products = await _productRepository.GetProductRatingMax(pageSize, PageIndex);
+			return Ok(products);
+		}
 
 		[HttpGet("getall")]	
 		public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts()

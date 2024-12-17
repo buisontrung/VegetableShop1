@@ -8,6 +8,7 @@ namespace ProductAPI.IRepository
 {
 	public interface IProductRepository
 	{
+		Task<IEnumerable<ProductDTO>> GetProductRatingMax(int pageSize, int pageIndex);
 		Task<ProductVariantDTO> GetAllProductVariantName(string productName, string variantName);
 		Task<IEnumerable<ProductVariantDTO>> GetAllProductVariantsName(string productName);
 		Task<IEnumerable<ResponseProductDialog>> GetAllProductsName(string categoryName);
